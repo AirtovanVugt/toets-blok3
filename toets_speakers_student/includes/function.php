@@ -49,13 +49,13 @@ function delete($id){
     $conn = null;
 }
 
-function create($BoxNaam, $Afbeelding, $Geluidkwaliteit, $Accuduur, $Waterdicht, $Beschrijving, $Merk){
+function create($data){
 
     $conn = openConn();
 
     $query = $conn->prepare("INSERT INTO speakers (name, img, soundquality, batterylife, waterresistant, description, brandId, merk) VALUES (:BoxNaam, :Afbeelding, :Geluidkwaliteit, :Accuduur, :Waterdicht, :Beschrijving, 0, :Merk)");
 
-    $query->execute([":BoxNaam" => $BoxNaam, ":Afbeelding" => $Afbeelding, ":Geluidkwaliteit" => $Geluidkwaliteit, ":Accuduur" => $Accuduur, ":Waterdicht" => $Waterdicht, ":Beschrijving" => $Beschrijving, ":Merk" => $Merk]);
+    $query->execute([":BoxNaam" => $data["Naam"], ":Afbeelding" => $data["Afbeelding"], ":Geluidkwaliteit" => $data["Geluidkwaliteit"], ":Accuduur" => $data["Accuduur"], ":Waterdicht" => $data["Geluidkwaliteit"], ":Beschrijving" => $data["Beschrijving"], ":Merk" => $data["Merk"]]);
 
     $conn = null;
 }

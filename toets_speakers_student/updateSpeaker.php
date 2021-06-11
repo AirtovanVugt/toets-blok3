@@ -23,20 +23,20 @@
 <div class="mb-5 mt-2">
     <h1>Wijzig de speakergegevens</h1>
     <form method="post" action="updatehelp.php?id=<?= $_GET["id"]; ?>">
-        <label>Naam: </label><br><input type="text" name="Naam" placeholder="Naam" required>
+        <label>Naam: </label><br><input type="text" name="Naam" placeholder="Naam">
         <br><br>
-        <label>Afbeelding: </label><br><input type="text" name="Afbeelding" placeholder="Naam van de afbeelding" required>
+        <label>Afbeelding: </label><br><input type="text" name="Afbeelding" placeholder="Naam van de afbeelding">
         <br><br>
-        <label>Geluidkwaliteit: </label><br><input type="text" name="Geluidkwaliteit" placeholder="Geluidkwaliteit" required>
+        <label>Geluidkwaliteit: </label><br><input type="text" name="Geluidkwaliteit" placeholder="Geluidkwaliteit">
         <br><br>
-        <label>Accu duur: </label><br><input type="text" name="Accuduur" placeholder="Accu duur" required>
+        <label>Accu duur: </label><br><input type="text" name="Accuduur" placeholder="Accu duur">
         <br><br>
-        <label>Waterdicht: </label><br><input type="text" name="Waterdicht" placeholder="Waterdicht" required>
+        <label>Waterdicht: </label><br><input type="text" name="Waterdicht" placeholder="Waterdicht">
         <br><br>
-        <label>Bschrijving: </label><br><textarea type="text" name="Beschrijving" placeholder="Beschrijving" required></textarea>
+        <label>Bschrijving: </label><br><textarea type="text" name="Beschrijving" placeholder="Beschrijving" ></textarea>
         <br><br>
         <label>merk: </label><br>
-        <select name="Merk">
+        <select type="text" name="Merk">
         <?php
             foreach ($Merken as $key){
         ?>

@@ -52,7 +52,7 @@ else{
                         <strong>Waterdicht: <?php echo $onebox["waterresistant"]; ?></strong>
                     </div>
                     <div>
-                        <strong>Merk: <?php echo $onebox["merk"]; ?></strong>
+                        <strong>Merk: <?php echo $onebox["Merk"]; ?></strong>
                     </div>
                 </div>
             </div>

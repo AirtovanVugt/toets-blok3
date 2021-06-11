@@ -1,7 +1,7 @@
 <?php
 
 include("includes/function.php");
-
+$Merken = AllMerken();
 ?>
 
 <html lang="en">
@@ -29,7 +29,16 @@ include("includes/function.php");
         <br><br>
         <label>Bschrijving: </label><br><textarea type="text" name="Beschrijving" placeholder="Beschrijving" required></textarea>
         <br><br>
-        <label>merk: </label><br><input type="text" name="Merk" placeholder="Merk" required>
+        <label>merk: </label><br>
+        <select type="text" name="Merk" required>
+        <?php
+            foreach ($Merken as $key){
+        ?>
+            <option><?php echo $key["name"]; ?></option>
+        <?php
+            }
+        ?>    
+        </select>
         <br><br>
         <input type="submit" name="submit_create" value="Maak aan!">
     </form>
